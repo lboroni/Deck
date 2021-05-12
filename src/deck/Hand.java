@@ -6,16 +6,14 @@ import java.util.List;
 
 public class Hand implements Serializable {
 
-    private int length;
     private List<Card> cards = new ArrayList<>();
 
-    public Hand(int length, List<Card> cards) {
-        this.length = length;
+    public Hand(List<Card> cards) {
         this.cards = cards;
     }
 
     @Override
     public String toString() {
-        return "Cards: " + this.cards + " - Length: " + this.length;
+        return "Cards: " + this.cards;
     }
 }

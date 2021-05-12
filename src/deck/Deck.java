@@ -38,7 +38,7 @@ public class Deck implements Serializable {
         List<Card> cardsHand = cards.stream().limit(i).collect(Collectors.toList());
         cardsHand.forEach(cards::remove);
 
-        return new Hand(i, cardsHand);
+        return new Hand(cardsHand);
     }
 
     public void save(String fileName) {
